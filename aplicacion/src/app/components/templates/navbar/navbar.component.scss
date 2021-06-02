@@ -1,0 +1,23 @@
+/* 
+    el orden definido para los estilos, 
+    es igual a como esta estructurado html
+    si no encuentras un etiqueta quizas no hubo
+    la necesidad de de darle estilos o esta en el
+    archivo principal styles.scss 
+*/
+
+/*
+    de la linea 18/23 encontramos un query de 575px
+    hacia abajo (ajuste para dispositivos moviles) donde hacemos uso
+    del padding para separar el menu de los extremos de la pantalla
+*/
+nav {
+    padding: 20px 0;
+    box-shadow: 0 0 10px 0 #ccc;
+
+    .container {
+        @media (max-width: 575px) { // query perteneciente a nav
+            padding: 0 30px;
+        }
+    }
+}

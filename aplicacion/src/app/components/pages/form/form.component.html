@@ -1,0 +1,60 @@
+<!--
+    de la linea 7/11 definimos un titulo para la accion que 
+    va ejecutar en ese momento el formulario, de la linea 13/17
+    definimos un enlace de redireccionamiento por si el usurio
+    quiere regresar a la tabla
+-->
+<div class="card container content_header">
+    <section class="content_flex">
+        <div class="content_title">
+            <h5>{{ title }}</h5>
+        </div>
+
+        <div>
+            <i class="fa fa-arrow-left" title="Volver" [routerLink]="['/tableColor']"></i>
+        </div>
+    </section>
+</div>
+
+<!--
+    en este bloque de codigo encontramos el formulario que se
+    trabajo con ngModel, este tiene un metodo saveUpdate()
+    que se encarga de ejecutar la accion segun la defina 
+    el usuario. Los campos de formulario estan definidos en
+    un contenedor y definimos secciones para los iconos
+    un loading spinner y una validacion propia con ngModel...
+-->
+<section class="content_form">
+    <form class="card" novalidate autocomplete="off" (ngSubmit)="saveUpdate()">
+        <div class="input-group flex-nowrap content_inputs"> <!-- contenedor de inputs -->
+            <i class="fa fa-edit input-group-text"></i>
+            <input type="text" name="color" placeholder="Color" autofocus required [(ngModel)]="formColor.color" #color="ngModel">
+        </div>
+
+        <div class="input-group flex-nowrap content_inputs"> <!-- contenedor de inputs -->
+            <i class="fa fa-edit input-group-text"></i>
+            <input type="text" name="tono" placeholder="Tono" required [(ngModel)]="formColor.tono" #tono="ngModel">
+        </div>
+
+        <button type="submit" class="my-3">{{ btnTitle }}</button>
+
+        <!-- seccion de los iconos -->
+        <section class="conten_icons">
+            <i class="fa fa-github"></i>
+            <i class="fa fa-envelope"></i>
+            <i class="fa fa-linkedin"></i>
+        </section>
+
+        <!-- seccion del spinner loading -->
+        <section class="spinner-border text-primary mx-auto" role="status" *ngIf="spinnerLoading">
+            <span class="visually-hidden"></span>
+        </section>
+
+        <!-- seccion validacion por boton -->
+        <section class="content_error" *ngIf="fieldsRequire">
+            <div *ngIf="color.errors?.required || tono.errors?.required">    
+                <span class="text-white">Todos los campos son obligatorios</span>
+            </div>
+        </section>
+    </form>
+</section>

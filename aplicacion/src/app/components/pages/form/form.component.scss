@@ -1,0 +1,108 @@
+/* 
+    el orden definido para los estilos, 
+    es igual a como esta estructurado html
+    si no encuentras un etiqueta quizas no hubo
+    la necesidad de de darle estilos o esta en el
+    archivo principal styles.scss 
+*/
+
+/*
+    importacion de la hoja de estilos que contiene
+    varaibales para reutilizar en la aplicacion
+    (ruta del archivo aplicacion/src/app/shared)...
+*/
+@import '_variables.scss';
+
+/*
+    los estilos de los contenedores de esta seccion estan
+    en style.scss por ser codigo reutilizable
+    execto content_title h5 y div .fa-arrow-left
+*/
+// .content_header {
+
+    // .content_flex {
+
+        .content_title h5 {
+            color: $colorAdd;
+            letter-spacing: 1.5px;
+        }
+        
+        div .fa-arrow-left {
+            color: $colorAdd;
+        }
+    // }
+// }
+
+/*
+    de la linea 40 hasta el final estan los estilos
+    de todos los elementos que contiene el formulario
+*/
+.content_form {
+
+    form {
+        width: 340px;
+        padding: 20px 30px;
+        margin: 0 auto;
+
+        .content_inputs {
+            margin-bottom: 20px;
+
+            i {
+                background-color: $colorAdd;
+                color: $colorText;
+                margin-top: 2px;
+            }
+        }
+
+        button {
+            border: none;
+            background-color: $colorText;
+            color: grey;
+            padding: 8px 16px;
+            margin: 0 !important;
+            border-radius: 5px;
+            transition: all .3s ease;
+            
+            &:hover {
+                background-color: $colorAdd;
+                color: $colorText;
+            }
+        }
+
+        .conten_icons {
+            text-align: center;
+            margin: 26px;
+            
+            i {
+                color: $colorText;
+                margin: 0 10px;
+                padding: 12px;
+                border-radius: 100px;
+                box-shadow: 0 3px 10px rgb(68, 66, 66);
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+                
+                &.fa-github {
+                    background-color: $fondoGit;
+                }
+
+                &.fa-envelope {
+                    background-color: $fondoEmail;
+                }
+
+                &.fa-linkedin {
+                    background-color: $fondoLinkedin;
+                }
+            }
+        }
+
+        .content_error {
+            text-align: center;
+            background-color: $colorDelete;
+        }
+    }
+}

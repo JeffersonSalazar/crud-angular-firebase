@@ -1,0 +1,18 @@
+<!-- 
+    de la linea 6/17 tenemos el titulo de la aplicacion y el
+    menu de navegacion el cual nos redirige a las
+    diferentes secciones del proyecto 
+-->
+<nav class="navbar navbar-expand navbar-light">
+    <section class="container">
+        <a class="navbar-brand">Crud Firebase</a> <!-- titulo -->
+       
+        <div class="collapse navbar-collapse"> <!-- enlaces de navegacion -->
+            <ul class="navbar-nav">
+                <li><a class="nav-link" [routerLink]="['/tableColor']">Table-Colors</a></li>    
+                <li><a class="nav-link" [routerLink]="['/formColor']">Form-Colors</a></li>
+            </ul>
+        </div>
+    </section>
+</nav>
+

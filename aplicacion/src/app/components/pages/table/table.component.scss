@@ -1,0 +1,66 @@
+/* 
+    el orden definido para los estilos, 
+    es igual a como esta estructurado html
+    si no encuentras un etiqueta quizas no hubo
+    la necesidad de de darle estilos o esta en el
+    archivo principal styles.scss 
+*/
+
+/*
+    importacion de la hoja de estilos que contiene
+    varaibales para reutilizar en la aplicacion
+    (ruta del archivo aplicacion/src/app/shared)...
+*/
+@import '_variables.scss';
+
+/*
+    los estilos de los contenedores de esta seccion 
+    estan en style.scss por ser codigo reutilizable
+    execto content_add a
+*/
+// .content_header {
+
+    // .content_flex {
+
+        .content_add a {      
+            color: $colorAdd;
+            letter-spacing: 1.2px;
+            font-size: 1.25rem;
+            line-height: 2;
+            text-decoration: none;
+        }
+    // }
+// }
+
+/*
+    de la linea 39 hasta el final estan los estilos
+    de todos los elementos que contiene la tabla
+*/
+.content_table table {
+    text-align: center;
+
+    thead th {
+        border-bottom: none;
+        width: 300px;
+    }
+    
+    tbody tr {
+
+        .pos_color {
+            color: $colorEdit;
+            font-weight: 600;
+        }
+
+        i {
+            font-size: 18px;
+            
+            &.fa-trash {
+                color: $colorDelete;
+            }
+            
+            &.fa-edit {
+                color: $colorEdit;
+            }
+        }
+    }
+}
