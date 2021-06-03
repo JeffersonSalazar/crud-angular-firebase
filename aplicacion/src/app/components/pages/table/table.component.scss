@@ -18,19 +18,30 @@
     estan en style.scss por ser codigo reutilizable
     execto content_add a
 */
-// .content_header {
+.content_header {
 
-    // .content_flex {
+    .content_flex {  
+        @media (max-width: 500px) {
+            flex-direction: column;
+            text-align: center;
+        }
 
-        .content_add a {      
+        .content_add a {
             color: $colorAdd;
             letter-spacing: 1.2px;
             font-size: 1.25rem;
             line-height: 2;
             text-decoration: none;
         }
-    // }
-// }
+
+        .content_search {
+            @media (max-width: 500px) {
+                width: 260px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
 
 /*
     de la linea 39 hasta el final estan los estilos
@@ -60,6 +71,7 @@
             
             &.fa-edit {
                 color: $colorEdit;
+                margin-top: 6px;
             }
         }
     }

@@ -25,7 +25,7 @@ tenemos en la aplicacion 2 enlaces de navegacion los cuales se encargan de
 redirigirnos a la tabla o al formulario de la misma.
 
 en la parte del formulario encontramos 2 campos para ingresar el color
-y el tono del color a los cuales añadimos una validacion que informa
+y el tono del color a los cuales aï¿½adimos una validacion que informa
 al usuario que los campos son requeridos lo que impide almacenar en la base de datos
 informacion vacia.
 
@@ -34,10 +34,10 @@ ingresados por el usuario
 
 en la tabla encontramos un boton para eliminar y otro para editar
 utilizando la opcion de editar vemos como nos redirige al formulario
-y añade en los campos de este la informaciona a editar y cambia la accion del
+y aï¿½ade en los campos de este la informaciona a editar y cambia la accion del
 formulario de guardar a actualizar
 
 por ultimo vemos como podemos eliminar una targeta tanto de la aplicacion como
 de la base de datos
 
-este diseño cuenta con el ajuste a dispositivos moviles
+este diseï¿½o cuenta con el ajuste a dispositivos moviles
